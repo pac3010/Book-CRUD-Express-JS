@@ -1,0 +1,57 @@
+GET http://localhost:5000/categories
+
+###
+POST http://localhost:5000/categories
+Content-Type: application/json
+
+{
+    "name": "Psychology"
+}
+
+###
+PATCH http://localhost:5000/categories/1
+Content-Type: application/json
+
+{
+    "name":"Comedy"
+}
+
+###
+DELETE http://localhost:5000/categories/6
+
+
+
+###
+GET http://localhost:5000/categories/1/books
+
+###
+GET http://localhost:5000/books
+
+###
+POST http://localhost:5000/books
+Content-Type: application/json
+
+{
+    "title": "Kindered",
+    "description": "One of the most significant literary artists of the twentieth century",
+    "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tappytoon.com%2Fen%2Fbook%2Fashtarte&psig=AOvVaw2d7Fizp9kgCy4x_ZX-6zEC&ust=1705839337187000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCODbsPP464MDFQAAAAAdAAAAABAD",
+    "release_year": "1995",
+    "price": "Rp. 78.000",
+    "total_page": "245",
+    "category_id": "5"
+}
+
+###
+PATCH http://localhost:5000/books/5
+Content-Type: application/json
+
+{
+    "total_page": "201"
+}
+
+###
+DELETE http://localhost:5000/books/4
+
+
+###
+GET http://localhost:5000/categories/5/books?sortByTitle=desc&minYear=1980
